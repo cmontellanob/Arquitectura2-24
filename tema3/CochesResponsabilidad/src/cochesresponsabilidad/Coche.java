@@ -27,7 +27,7 @@ public class Coche {
     
     public void GuardarBd(){
           try {
-            Connection conexion = DriverManager.getConnection("jdbc:mysql", "root", "");
+            Connection conexion = DriverManager.getConnection("dbc:mysql://localhost:3306/bd_biblioteca", "root", "");
             String sql = "INSERT INTO coches(marca,modelo,placa,color,cilindrada) VALUES (?,?,?,?,?) ";
 
             PreparedStatement instruccion = conexion.prepareStatement(sql);
